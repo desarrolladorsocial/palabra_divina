@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientación Espiritual - Tu Guía en la Fe</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        :root {
+            --primary-color: #2c3e50; /* Azul oscuro (Noche) */
+            --secondary-color: #3498db; /* Azul brillante (Cielo) */
+            --accent-color: #d4af37; /* Dorado suave (Divinidad) */
+            --light-bg-color: #f4f6f7; /* Gris muy claro (Pureza) */
+            --dark-text-color: #333333; /* Gris oscuro para texto */
+            --light-text-color: #ffffff; /* Texto blanco */
+            --formal-font: 'Georgia', 'Times New Roman', Times, serif;
+            --readable-font: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--readable-font);
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg-color);
+            color: var(--dark-text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: var(--formal-font);
+            font-size: 2.8em;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+
+        .hero {
+            background-color: var(--light-text-color);
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .hero .image-placeholder {
+            background-color: #e0e0e0; /* Color de fondo para el placeholder */
+            width: 100%;
+            max-width: 500px; /* Ajusta según la imagen */
+            height: 300px; /* Ajusta según la imagen */
+            margin: 30px auto;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: italic;
+            color: #777;
+            border: 2px dashed var(--secondary-color);
+        }
+
+        .hero h2 {
+            font-family: var(--formal-font);
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #555;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button-primary {
+            background-color: var(--secondary-color);
+            color: var(--light-text-color);
+            font-weight: bold;
+        }
+
+        .button-primary:hover {
+            background-color: #2980b9; /* Azul más oscuro */
+            transform: translateY(-2px);
+        }
+
+        .button-accent {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .button-accent:hover {
+            background-color: #c09b2e; /* Dorado más oscuro */
+            transform: translateY(-2px);
+        }
+
+        .features {
+            padding: 50px 20px;
+            background-color: var(--light-bg-color);
+        }
+
+        .features h2 {
+            text-align: center;
+            font-family: var(--formal-font);
+            font-size: 2.2em;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+        }
+
+        .features-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+        }
+
+        .feature-item {
+            background-color: var(--light-text-color);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex-basis: calc(33.333% - 40px); /* Tres columnas con espacio */
+            min-width: 280px; /* Para que no se achiquen demasiado */
+            transition: transform 0.3s ease;
+        }
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item i {
+            font-size: 3em;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            font-family: var(--formal-font);
+            font-size: 1.5em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .donation-section {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .donation-section h2 {
+            font-family: var(--formal-font);
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        .donation-section p {
+            font-size: 1.1em;
+            max-width: 650px;
+            margin: 0 auto 30px auto;
+            opacity: 0.9;
+        }
+
+        footer {
+            background-color: #1c2833; /* Un poco más oscuro que el primary */
+            color: #bdc3c7; /* Gris claro para el texto del footer */
+            text-align: center;
+            padding: 25px 0;
+            font-size: 0.9em;
+        }
+        
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+            .hero h2 {
+                font-size: 2em;
+            }
+            .feature-item {
+                flex-basis: calc(50% - 20px); /* Dos columnas en tablets */
+            }
+        }
+
+        @media (max-width: 500px) {
+            .feature-item {
+                flex-basis: 100%; /* Una columna en móviles */
+            }
+            .button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-hands-praying" style="color: var(--accent-color);"></i> Palabra Divina </h1>
+            <p>Tu Compañero Espiritual en Momentos de Necesidad</p>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Encuentra Paz y Guía en la Palabra de Dios</h2>
+            <p>
+                Nuestro Orientador cristiano está aquí para ofrecerte consuelo en momentos de pesar, ayudarte a tomar decisiones difíciles
+                iluminado por las Escrituras, y acompañarte en oración cuando más lo necesites. No importa el horario ni el lugar donde estés,
+                te apoyaremos con la palabra de Dios.
+            </p>
+            
+            <img src="foto.png" alt="Imagen inspiradora de fe" style="max-width: 500px; height: auto; border-radius: 8px; margin: 30px auto; display: block;">
+            </div>
+            <p>
+                Te conectarás con nosotros a través de la Aplicación Telegram.
+            </p>
+
+            <a href="https://t.me/Palabra_Divina_bot" target="_blank" class="button button-primary">
+                <i class="fab fa-telegram-plane"></i> Conversar con el Orientador
+            </a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>¿Cómo Podemos Ayudarte?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-heart-broken"></i>
+                    <h3>Orientación en el Pesar</h3>
+                    <p>Recibe palabras de aliento y consuelo basadas en la fe cristiana para superar momentos de tristeza y dificultad.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-bible"></i>
+                    <h3>Decisiones con Sabiduría Divina</h3>
+                    <p>Obtén perspectiva y guía fundamentada en la Biblia para tomar decisiones importantes en tu vida.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Acompañamiento en Oración</h3>
+                    <p>Solicita una oración personalizada para cualquier momento del día, fortaleciendo tu conexión espiritual.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="donation-section">
+        <div class="container">
+            <h2><i class="fas fa-donate" style="color: var(--accent-color);"></i> Apoya Este Ministerio Digital</h2>
+            <p>
+                Este proyecto es una iniciativa de "desarrollador Social", creada sin fines de lucro con el deseo de brindar apoyo espiritual.
+                Tu donación nos ayudará a mantener y mejorar esta herramienta, además de impulsar nuevos proyectos de ayuda y bien común.
+                ¡Cada aporte es valioso!
+            </p>
+            <a href="https://link.mercadopago.cl/desarrolladorsocial" target="_blank" class="button button-accent">
+                <i class="fas fa-gift"></i> Realizar una Donación
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Palabra Divina. Desarrollado con fe y dedicación por "desarrollador Social".</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
