@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orientación Espiritual - Tu Guía en la Fe</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         :root {
-            --primary-color: #2c3e50; /* Azul oscuro (Noche) */
-            --secondary-color: #3498db; /* Azul brillante (Cielo) */
-            --accent-color: #d4af37; /* Dorado suave (Divinidad) */
-            --light-bg-color: #f4f6f7; /* Gris muy claro (Pureza) */
-            --dark-text-color: #333333; /* Gris oscuro para texto */
-            --light-text-color: #ffffff; /* Texto blanco */
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #d4af37;
+            --light-bg-color: #f4f6f7;
+            --dark-text-color: #333333;
+            --light-text-color: #ffffff;
             --formal-font: 'Georgia', 'Times New Roman', Times, serif;
             --readable-font: 'Helvetica Neue', Arial, sans-serif;
         }
@@ -62,21 +63,6 @@
             border-bottom: 1px solid #ddd;
         }
 
-        .hero .image-placeholder {
-            background-color: #e0e0e0; /* Color de fondo para el placeholder */
-            width: 100%;
-            max-width: 500px; /* Ajusta según la imagen */
-            height: 300px; /* Ajusta según la imagen */
-            margin: 30px auto;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-style: italic;
-            color: #777;
-            border: 2px dashed var(--secondary-color);
-        }
-
         .hero h2 {
             font-family: var(--formal-font);
             font-size: 2.5em;
@@ -91,6 +77,15 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        .responsive-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 8px;
+            margin: 30px auto;
+            display: block;
         }
 
         .button {
@@ -112,7 +107,7 @@
         }
 
         .button-primary:hover {
-            background-color: #2980b9; /* Azul más oscuro */
+            background-color: #2980b9;
             transform: translateY(-2px);
         }
 
@@ -123,7 +118,7 @@
         }
 
         .button-accent:hover {
-            background-color: #c09b2e; /* Dorado más oscuro */
+            background-color: #c09b2e;
             transform: translateY(-2px);
         }
 
@@ -153,10 +148,11 @@
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
-            flex-basis: calc(33.333% - 40px); /* Tres columnas con espacio */
-            min-width: 280px; /* Para que no se achiquen demasiado */
+            flex-basis: calc(33.333% - 40px);
+            min-width: 280px;
             transition: transform 0.3s ease;
         }
+
         .feature-item:hover {
             transform: translateY(-5px);
         }
@@ -200,13 +196,13 @@
         }
 
         footer {
-            background-color: #1c2833; /* Un poco más oscuro que el primary */
-            color: #bdc3c7; /* Gris claro para el texto del footer */
+            background-color: #1c2833;
+            color: #bdc3c7;
             text-align: center;
             padding: 25px 0;
             font-size: 0.9em;
         }
-        
+
         footer p {
             margin: 0;
         }
@@ -216,24 +212,37 @@
             header h1 {
                 font-size: 2.2em;
             }
+            .hero {
+                padding: 40px 10px;
+            }
             .hero h2 {
                 font-size: 2em;
             }
             .feature-item {
-                flex-basis: calc(50% - 20px); /* Dos columnas en tablets */
+                flex-basis: calc(50% - 20px);
+            }
+            .responsive-image {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
             }
         }
 
         @media (max-width: 500px) {
             .feature-item {
-                flex-basis: 100%; /* Una columna en móviles */
+                flex-basis: 100%;
             }
             .button {
                 padding: 12px 25px;
                 font-size: 1em;
             }
+            .hero h2 {
+                font-size: 1.6em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
         }
-
     </style>
 </head>
 <body>
@@ -253,13 +262,10 @@
                 iluminado por las Escrituras, y acompañarte en oración cuando más lo necesites. No importa el horario ni el lugar donde estés,
                 te apoyaremos con la palabra de Dios.
             </p>
-            
-            <img src="foto.png" alt="Imagen inspiradora de fe" style="max-width: 500px; height: auto; border-radius: 8px; margin: 30px auto; display: block;">
-            </div>
+            <img src="foto.png" alt="Imagen inspiradora de fe" class="responsive-image">
             <p>
                 Te conectarás con nosotros a través de la Aplicación Telegram.
             </p>
-
             <a href="https://t.me/Palabra_Divina_bot" target="_blank" class="button button-primary">
                 <i class="fab fa-telegram-plane"></i> Conversar con el Orientador
             </a>
